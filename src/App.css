@@ -1,0 +1,116 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  gap: .3rem;
+}
+
+.form__register {
+  background-color: rgb(212, 242, 253);
+  border-radius: 10px;
+  width: 20rem;
+  padding: 1rem;
+  margin-left: 2rem;
+}
+
+.appointments__list {
+  width: 24rem;
+  padding: 1rem;
+  background-color: rgb(212, 242, 253);
+  border-radius: 10px;
+  padding-right: 1.5rem;
+}
+
+.no__appointments {
+  width: 24rem;
+  padding: 1rem;
+  background-color: rgb(212, 242, 253);
+  border-radius: 10px;
+  padding-right: 1.5rem;
+  text-align: center;
+  color: rgb(28, 0, 104);
+}
+
+.appointments {
+  width: 100%;
+  background-color: rgb(255, 200, 160);
+  line-height: .3rem;
+  padding: .2rem;
+  border-radius: 10px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+
+}
+
+.appointments__detail {
+  display: flex;
+  gap: 5rem;
+  padding: .5rem;
+  border-bottom: 1px solid;
+  line-height: 1.2rem;
+}
+
+.appointments__detail_symptoms {
+  padding: .5rem;
+  margin-bottom: .5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid;
+}
+
+@media (min-width: 768px) {
+  .appointments__list {
+    width: 50%;
+  }
+}
+
+.detail__title {
+  text-decoration: underline;
+  line-height: 1px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: .5rem;
+  padding: .5rem;
+}
+
+.button__confirm {
+  width: 5rem;
+  padding: .6rem;
+  background-color: aquamarine;
+  font-weight: 600;
+  color: green;
+  cursor: pointer;
+}
+
+.button__edit {
+  width: 5rem;
+  padding: .6rem;
+  font-weight: 600;
+  color: rgb(3, 75, 104);
+  cursor: pointer;
+}
+
+.button__edit:focus {
+  border: 2px solid rgb(113, 241, 237);
+  background-color: rgb(166, 209, 223);
+  /* scale: 1.1; */
+}
+
+.button__delete {
+  width: 5rem;
+  padding: .6rem;
+  background-color: rgb(245, 105, 133);
+  font-weight: 600;
+  color: brown;
+  cursor: pointer;
+}
+
+.button__delete:hover {
+  border: 2px solid rgb(206, 66, 66);
+  background-color: rgb(245, 147, 147);
+  scale: 1.1;
+}
