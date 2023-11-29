@@ -15,7 +15,7 @@ const Appoinments = () => {
     }
 
     const handleRemove = (id) => {
-        const isDelete = confirm('Estás seguro que eliminar esta cita?')
+        const isDelete = confirm('Estás seguro que quieres eliminar esta cita?')
         if (isDelete) {
             const newAppointments = appointments.filter(appointment => appointment.id !== id)
             setAppointments(newAppointments)

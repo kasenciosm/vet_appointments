@@ -14,7 +14,6 @@ const AppoinmentsForm = ({ onSaveAppointment, appointment, update }) => {
 
 
     const [form, setForm] = useState(INITIAL_FORM_STATE)
-    const [editing, setEditing] = useState(false)
 
     useEffect(() => {
         if (Object.keys(appointment).length > 0) {
