@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <header>
-        <Header title='Cita Medica para Mascotas' />
+        <Header title='Citas Médicas para Mascotas' />
       </header>
       <main>
         <Appoinments />

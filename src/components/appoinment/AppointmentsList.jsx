@@ -11,7 +11,6 @@ const AppointmentsList = ({ appointments, onRemove, onEdit }) => {
             </section>
         )
     }
-
     return (
         <section className='appointments__list'>
             <h2> Lista de Pacientes</h2>

@@ -10,34 +10,36 @@ const Appoinments = () => {
 
 
     const handleSaveAppointment = (form) => {
+        form.id = crypto.randomUUID()
         setAppointments([...appointments, form])
     }
 
     const handleRemove = (id) => {
-        const newAppointments = appointments.filter(appointment => appointment.id !== id)
-        setAppointments(newAppointments)
+        const isDelete = confirm('Estás seguro que eliminar esta cita?')
+        if (isDelete) {
+            const newAppointments = appointments.filter(appointment => appointment.id !== id)
+            setAppointments(newAppointments)
+        } else {
+            return
+        }
     }
 
     const handleEdit = (appointment) => {
         setAppointmentSelected(appointment)
     }
 
-    // const handleEdit = (editedAppointment) => {
-    //     const updatedAppointments = appointments.map(appointment => {
-    //         if (appointment.id === editedAppointment.id) {
-    //             return editedAppointment
-    //         }
-    //         return appointment
-    //     })
+    const handleUpdate = (form) => {
+        let newForm = appointments.map(el => el.id === form.id ? form : el)
+        setAppointments(newForm)
+    }
 
-    //     setAppointmentSelected(updatedAppointments)
-    // }
 
     return (
         <>
             <AppoinmentsForm
                 onSaveAppointment={handleSaveAppointment}
-                appointment={appointmentSelected} />
+                appointment={appointmentSelected}
+                update={handleUpdate} />
 
             <AppointmentsList
                 appointments={appointments}
